@@ -9,6 +9,7 @@ sub askpass {
   my $gotpass = 0;
 
   my $mw = shift @_;
+  my $text = shift @_;
   my $user = shift @_;
   my $pass = shift @_;
 
@@ -46,3 +47,29 @@ sub askpass {
 }
 
 1;
+
+=head1 SYNOPSIS:
+
+Tkx::Login provides a simple login interface for Tkx applications. Given
+a window value to extend, it opens a new window, queries for username and
+password and returns the values.
+
+=head1 USAGE:
+
+  use Tkx::Login;
+    
+  my ($username,$password) = Tkx::Login::askpass($mainwindow,$message,$pre_user,$pre_password);
+
+  Parameters:
+  
+  $mainwindow - Current MainWindow in your Tkx app. (required)
+  $message - A text message to display in the login window. (optional)
+  $pre_user - A value to pre-populate the username blank with. (optional)
+  $pre_pass - A value to pre-populate the password blank with. This will be obscured with asterisks. (optional)
+
+=head1 AUTHORSHIP:
+
+  Tkx::Login vVERSIONTAG DATETAG
+
+  (c) 2012-YEARTAG, Phillip Pollard <bennie@cpan.org>
+  Released under the Perl Artistic License
