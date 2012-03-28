@@ -16,8 +16,7 @@ sub askpass {
   my $win = $mw->new_toplevel();
   $win->g_wm_title("Login");
 
-  my $label = $win->new_ttk__label(-text => "Please enter Username and Password for ASUP." );
-  $label->g_grid;
+  $win->new_ttk__label(-text => $text )->g_grid if $text;
 
   $win->new_ttk__label(-text => "Username:" )->g_grid;
 
