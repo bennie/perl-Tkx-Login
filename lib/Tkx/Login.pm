@@ -6,43 +6,56 @@ use strict;
 package Tkx::Login;
 
 sub askpass {
-  my $gotpass = 0;
+  my $interation = 0;
 
   my $mw = shift @_;
   my $text = shift @_;
   my $user = shift @_;
   my $pass = shift @_;
 
+  my $original_user = $user;
+  my $original_pass = $pass;
+
   my $win = $mw->new_toplevel();
   $win->g_wm_title("Login");
 
-  $win->new_ttk__label(-text => $text )->g_grid if $text;
+  $win->new_ttk__label(-text => $text )->g_grid( -columnspan => 2 ) if $text;
 
-  $win->new_ttk__label(-text => "Username:" )->g_grid;
+  $win->new_ttk__label(-text => "Username:" )->g_grid( -stick=> 'e', -column => 0, -row => 1 );
 
   my $name_entry = $win->new_ttk__entry(-textvariable => \$user);
-  $name_entry->g_grid;
+  $name_entry->g_grid( -column => 1, -row => 1 );
 
-  $win->new_ttk__label(-text => "Password:" )->g_grid;
-
+  $win->new_ttk__label(-text => "Password:" )->g_grid( -sticky => 'e', -column => 0, -row => 2 );
+ 
   my $pass_entry = $win->new_ttk__entry(-textvariable => \$pass, -show => '*');
-  $pass_entry->g_grid;
+  $pass_entry->g_grid( -column => 1, -row => 2 );
+
+  my $okcancel;
 
   my $ok = $win->new_button(
     -text => 'Ok',
     -command => sub {
-       #message("Got: ".$name_entry->get );
-       $gotpass++;
+       $okcancel = 'ok';
+       $interation++;
        $win->g_destroy;
     },
-  );
-  $ok->g_grid;
+  )->g_grid( -column => 0, -row => 3 );
 
-  while ( $gotpass < 1 ) {
+  my $cancel = $win->new_button(
+    -text => 'Cancel',
+    -command => sub {
+       $okcancel = 'cancel';
+       $interation++;
+       $win->g_destroy;
+    },
+  )->g_grid( -column => 1, -row => 3 );
+
+  while ( $interation < 1 ) {
     Tkx::update();
   }
 
-  return ( $user, $pass );
+  return $okcancel eq 'ok' ? ( $user, $pass ) : ( $original_user, $original_pass );
 }
 
 1;
