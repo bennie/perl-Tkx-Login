@@ -1,5 +1,9 @@
 Revision history for Perl extension Tkx::Login.
 
-1.10  2006/06/31
+VERSIONTAG  DATETAG
+
+	Added a "Cancel" button option.
+
+1.04  2012/03/28
 
 	Initial module creation.
