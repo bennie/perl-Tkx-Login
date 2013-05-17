@@ -1,4 +1,4 @@
-name:         Text-TabFile
+name:         Tkx-Login
 version:      VERSIONTAG
 version_from: lib/Tkx/Login.pm
 installdirs:  site
