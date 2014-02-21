@@ -79,9 +79,22 @@ password and returns the values.
   $pre_user - A value to pre-populate the username blank with. (optional)
   $pre_pass - A value to pre-populate the password blank with. This will be obscured with asterisks. (optional)
 
-=head1 AUTHORSHIP:
+=head1 BUGS AND SOURCE
 
-  Tkx::Login vVERSIONTAG DATETAG
+	Bug tracking for this module: https://rt.cpan.org/Ticket/Display.html?id=?????
 
-  (c) 2012-YEARTAG, Phillip Pollard <bennie@cpan.org>
-  Released under the Perl Artistic License
+	Source hosting: http://www.github.com/bennie/perl-Tkx-Login
+
+=head1 VERSION
+
+	Tkx::Login vVERSIONTAG (DATETAG)
+
+=head1 COPYRIGHT
+
+	(c) 2012-YEARTAG, Phillip Pollard <bennie@cpan.org>
+
+=head1 LICENSE
+
+This source code is released under the "Perl Artistic License 2.0," the text of
+which is included in the LICENSE file of this distribution. It may also be
+reviewed here: http://opensource.org/licenses/artistic-license-2.0
