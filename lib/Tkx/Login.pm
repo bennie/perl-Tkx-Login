@@ -1,9 +1,9 @@
-$Tkx::Login::VERSION='VERSIONTAG';
+package Tkx::Login;
 
 use Tkx;
 use strict;
 
-package Tkx::Login;
+$Tkx::Login::VERSION='VERSIONTAG';
 
 sub askpass {
   my $interation = 0;
