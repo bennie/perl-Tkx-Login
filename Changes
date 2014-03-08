@@ -2,6 +2,10 @@ Revision history for Perl extension Tkx::Login.
 
 VERSIONTAG  DATETAG
 
+	Meta information now automatically generated
+
+1.05  2014/02/25
+
 	Added a "Cancel" button option.
 	Updated meta information
 	Including a LICENSE file

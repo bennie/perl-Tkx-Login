@@ -1,0 +1,17 @@
+### Config
+
+$module = 'Tkx-Login';
+
+$author  = 'Phil Pollard <bennie@cpan.org>';
+$license = 'artistic_2';
+
+$abstract    = 'A Tkx based Login screen';
+$description = $abstract;
+
+$perl_ver = '5.006001';
+
+%requires = (
+  'Tkx' => 0,
+  'Test' => 0,
+  'Test::More' => 0
+);
