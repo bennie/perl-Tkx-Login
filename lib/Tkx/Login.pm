@@ -1,6 +1,8 @@
 package Tkx::Login;
 
 use Tkx;
+
+use warnings;
 use strict;
 
 $Tkx::Login::VERSION='VERSIONTAG';
