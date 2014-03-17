@@ -12,6 +12,5 @@ $perl_ver = '5.006001';
 
 %requires = (
   'Tkx' => 0,
-  'Test' => 0,
   'Test::More' => 0
 );
