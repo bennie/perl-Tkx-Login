@@ -2,6 +2,10 @@ Revision history for Perl extension Tkx::Login.
 
 VERSIONTAG  DATETAG
 
+	Correcting META not having perl version.
+
+1.08  2014/03/17
+
 	Moving to Test::Simple
 
 1.07  2014/03/14
