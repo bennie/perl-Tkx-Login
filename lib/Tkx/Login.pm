@@ -62,6 +62,10 @@ sub askpass {
 
 1;
 
+=head1 NAME
+
+Tkx::Login - A Simple Login Window for Tkx 
+
 =head1 SYNOPSIS:
 
 Tkx::Login provides a simple login interface for Tkx applications. Given
